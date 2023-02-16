@@ -30,15 +30,15 @@ class Management
     
     void information()
     {
-      cout<<"\nEnter customer ID:";
+      cout<<"\nEnter customer ID: ";
       cin>>cId;
-      cout<<"\n Enter the name :";
+      cout<<"\n Enter the name: ";
       cin>>name;
-      cout<<"\n Enter the age :";
+      cout<<"\n Enter the age: ";
       cin>>age;
-      cout<<"\n Address :";
+      cout<<"\n Address: ";
       cin>>address;
-      cout<<"\n Gender :";
+      cout<<"\n Gender: ";
       cin>>gender;
       cout<<"Your details are saved\n"<<endl;
     }
@@ -53,7 +53,7 @@ string Details::gender;
 class registration
 {
   public:
-  {
+  
     static int choice;
     int choice1;
     int back;
@@ -65,7 +65,7 @@ class registration
 
       for(int a=0;a<4;a++)
       {
-        cout<<(a+1)<<".flight to"<<flightN[a]<<endl; 
+        cout<<(a+1)<<".flight to  "<<flightN[a]<<endl; 
       }
 
       cout<<"\nWelcome to the Airlines!"<<endl;
@@ -85,9 +85,9 @@ class registration
 
             cout<<"1. CAN - 400"<<endl;
             cout<<"\t02-01-2023 8:00AM 05hrs $. 14000"<<endl;
-            cout<<"1. CAN - 500"<<endl;
+            cout<<"2. CAN - 500"<<endl;
             cout<<"\t02-02-2023 11:00AM 06hrs $. 15000"<<endl;
-            cout<<"1. CAN - 600"<<endl;
+            cout<<"3. CAN - 600"<<endl;
             cout<<"\t02-03-2023 10:00AM 07hrs $. 16000"<<endl;
 
             cout<<"\nSelect the flight you want to book :";
@@ -139,9 +139,9 @@ class registration
 
             cout<<"1. US - 100"<<endl;
             cout<<"\t03-01-2023 12:00PM 03hrs $. 4000"<<endl;
-            cout<<"1. US - 200"<<endl;
+            cout<<"2. US - 200"<<endl;
             cout<<"\t03-02-2023 01:00PM 10hrs $. 5000"<<endl;
-            cout<<"1. US - 300"<<endl;
+            cout<<"3. US - 300"<<endl;
             cout<<"\t03-03-2023 02:00PM 02hrs $. 6000"<<endl;
 
             cout<<"\nSelect the flight you want to book :";
@@ -194,9 +194,9 @@ class registration
 
             cout<<"1. UK - 700"<<endl;
             cout<<"\t04-01-2023 03:00PM 12hrs $. 30000"<<endl;
-            cout<<"1. UK - 800"<<endl;
+            cout<<"2. UK - 800"<<endl;
             cout<<"\t04-02-2023 04:00PM 14hrs $. 40000"<<endl;
-            cout<<"1. UK - 900"<<endl;
+            cout<<"3. UK - 900"<<endl;
             cout<<"\t04-03-2023 05:00PM 20hrs $. 20000"<<endl;
 
             cout<<"\nSelect the flight you want to book :";
@@ -249,9 +249,9 @@ class registration
 
             cout<<"1. Euro - 710"<<endl;
             cout<<"\t05-01-2023 10:00PM 12hrs $. 30000"<<endl;
-            cout<<"1. Euro - 810"<<endl;
+            cout<<"2. Euro - 810"<<endl;
             cout<<"\t05-02-2023 06:00PM 14hrs $. 40000"<<endl;
-            cout<<"1. Euro - 910"<<endl;
+            cout<<"3. Euro - 910"<<endl;
             cout<<"\t05-03-2023 05:00PM 20hrs $. 20000"<<endl;
 
             cout<<"\nSelect the flight you want to book :";
@@ -293,7 +293,7 @@ class registration
                 {
                   mainMenu(); 
                 }
-                default
+                default :
                 {
                   cout<<"Invalid input, shifting to the main menu !"<<endl; 
                   mainMenu();
@@ -303,7 +303,6 @@ class registration
         }
 
     }
-  }
 };
 
 //////////////////////TICKET/////////////////////////////////
@@ -323,10 +322,10 @@ class ticket : public registration, Details
                 outf<<"_________________Ticket__________________ "<<endl;
                 outf<<"_________________________________________ "<<endl;
 
-                outf<<"Customer ID:"<<Details::cId<<endl;
-                outf<<"Customer Name:"<<Details::name<<endl;
-                outf<<"Customer Gender:"<<Details::gender<<endl;
-                outf<<"\tDescription"<<endl<<endl;
+                outf<<"Customer ID:  "<<Details::cId<<endl;
+                outf<<"Customer Name:  "<<Details::name<<endl;
+                outf<<"Customer Gender:  "<<Details::gender<<endl;
+                outf<<"\tDescription "<<endl<<endl;
 
                   if (registration::choice==1)
                   {
@@ -345,8 +344,8 @@ class ticket : public registration, Details
                     destination="Europe";
                   }
                 
-                outf<<"Destination\t\t"<<destination<<endl;
-                outf<<"Flight cost  :\t\t"<<registration::charges<<endl;
+                outf<<"Destination: \t\t"<<destination<<endl;
+                outf<<"Flight cost: \t\t"<<registration::charges<<endl;
               }
               outf.close();
            }
@@ -375,21 +374,20 @@ void mainMenu()
   int lchoice;
   int schoice;
   int back;
+    
+  cout<<"\t              Smith Airlines  \n"<<endl;
+  cout<<"\t              ___Main Menu___\n"<<endl;
 
-  cout<<"\t        Smith Airlines  \n"<<endl;
-  cout<<"\t       ____Main Menu____ \n"<<endl;
+  cout<<"\t==============================================\t"<<endl;
+  cout<<"\t|                                            \t|"<<endl;
+  cout<<"\t|\t Press 1 Add the Customer Details  \t|"<<endl;
+  cout<<"\t|\t Press 2 Add Flight Registration   \t|"<<endl;
+  cout<<"\t|\t Press 3 Ticket and Charges        \t|"<<endl;
+  cout<<"\t|\t Press 4 Exit                      \t|"<<endl;
+  cout<<"\t|\t                                  \t|" <<endl;
+  cout<<"\t==============================================\t"<<endl;
 
-  cout<<"\t______________________________________________"<<endl;
-  cout<<"\t\t\t\t\t\t\t|"  <<endl;
-
-  cout<<"\t\t Press 1 Add the Customer Details   \t|"<<endl;
-  cout<<"\t\t Press 2 Add Flight Registration    \t|"<<endl;
-  cout<<"\t\t Press 3 Ticket and Charges         \t|"<<endl;
-  cout<<"\t\t Press 4 Exit                       \t|"<<endl;
-  cout<<"\t\t\t\t\t\t\t|" <<endl;
-  cout<<"\t__________________________________________________"<<endl;
-
-  cout<<"Enter the choice  :  ";
+  cout<<"Enter the choice:  ";
   cin>> lchoice;
 
   Details  d;
@@ -423,7 +421,7 @@ void mainMenu()
       }
       case 3:
       {
-       cout<<"______Get A Ticket_______\n "<<endl;
+        cout<<"______Get A Ticket_______\n "<<endl;
         t.Bill();
 
         cout<<"Your ticket is printed, you can collect\n"<<endl;
@@ -436,21 +434,17 @@ void mainMenu()
             t.displayBill();
             cout<<"Press any key to go back to Main Menu\n"<<endl;
             cin>>back;
-            
-          if(back==1)
-          {
-            mainMenu();
-          }
-          else
-          {
-            mainMenu();
-          }
-          else
-          {
-            mainMenu();
-          }
-            break;
-          }
+
+            if(back==1)
+            {
+              mainMenu();
+            }
+            else
+            {
+              mainMenu();
+            }
+              break;           
+          }   
       }
       case 4:
       {
@@ -463,14 +457,15 @@ void mainMenu()
         mainMenu();
         break;
       }
-   }
-
+    }
 }
 
 ////////////////////////////////////////////// 
 
 int main()
 {
+  
   Management Mobj;
+  
   return 0;
 }
