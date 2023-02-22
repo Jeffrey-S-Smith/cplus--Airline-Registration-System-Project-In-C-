@@ -1,10 +1,10 @@
 _____________Smith Airlines____________
 _________________Ticket__________________ 
 _________________________________________ 
-Customer ID:  10
-Customer Name:  jeffsmith
-Customer Gender:  slamtheballrd
+Customer ID:  25
+Customer Name:  jeffreysmith
+Customer Gender:  male
 	Description 
 
-Destination: 		UK
+Destination: 		Europe
 Flight cost: 		20000
